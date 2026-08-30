@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Хавра — таргетолог Telegram Ads и сайты-презентации</title>
+<meta name="description" content="Настройка Telegram Ads и сайты-презентации под этот трафик. Подключение кабинета, аудитории, объявления, ведение кампаний. Заявка в Telegram.">
+<meta property="og:title" content="Хавра — таргетолог Telegram Ads">
+<meta property="og:description" content="Реклама в Telegram и страницы, которые её продают.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://khavra05.netlify.app/">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Manrope:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #0b0616; color: #f3effa; -webkit-font-smoothing: antialiased; }
+  a { color: #b98cff; text-decoration: none; }
+  a:hover { color: #d6bcff; }
+  ::selection { background: rgba(155,92,255,.35); }
+  @keyframes khGlow { 0%,100% { opacity:.3 } 50% { opacity:1 } }
+  @keyframes khFloat { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
+  @keyframes khRise { 0% { opacity:0; transform: translateY(26px) } 100% { opacity:1; transform: none } }
+  @keyframes khMarquee { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
+  @keyframes khScroll { 0% { transform: translateY(-100%) } 100% { transform: translateY(100%) } }
+  [data-rise][data-armed] { opacity: 0; }
+  @media (pointer: fine) { html, body, a, button, input, textarea, [data-magnetic] { cursor: none; } }
+  details summary::-webkit-details-marker { display: none; }
+  details[open] [data-plus] { transform: rotate(45deg); }
+  input::placeholder, textarea::placeholder { color: #7e769a; }
+  input:focus, textarea:focus { outline: none; border-color: rgba(185,140,255,.6); }
+  [data-rise].in { animation: khRise 1s cubic-bezier(.16,1,.3,1) both; }
+</style>
+</helmet>
+<div style="background:#0b0616;font-family:Manrope,system-ui,sans-serif;overflow-x:hidden;position:relative">
+
+  
+
+  <div ref="{{ ringRef }}" style="position:fixed;top:0;left:0;width:36px;height:36px;margin:-18px 0 0 -18px;border:1px solid rgba(185,140,255,.75);border-radius:50%;pointer-events:none;z-index:60;opacity:0;transition:opacity .25s,width .22s,height .22s,margin .22s,background .22s;will-change:transform"></div>
+  <div ref="{{ dotRef }}" style="position:fixed;top:0;left:0;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#e5d5ff;box-shadow:0 0 12px rgba(185,140,255,.9);pointer-events:none;z-index:61;opacity:0;transition:opacity .25s;will-change:transform"></div>
+
+  <nav ref="{{ navRef }}" style="position:fixed;top:0;left:0;right:0;z-index:40;background:rgba(11,6,22,.72);backdrop-filter:blur(16px);border-bottom:1px solid rgba(243,239,250,.08);transform:translateY(-100%);transition:transform .45s cubic-bezier(.16,1,.3,1)">
+    <div style="max-width:1360px;margin:0 auto;padding:16px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:19px;letter-spacing:0.18em;text-transform:uppercase">Хавра</span>
+      <div style="display:flex;align-items:center;gap:32px;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#a99cc4">
+        <a href="#services" style="color:inherit" style-hover="color:#b98cff">Услуги</a>
+        <a href="#process" style="color:inherit" style-hover="color:#b98cff">Процесс</a>
+        <a href="#faq" style="color:inherit" style-hover="color:#b98cff">Вопросы</a>
+        <a href="#contact" data-magnetic="" style="color:#120a20;background:linear-gradient(135deg,#d9bcff,#9b5cff);padding:11px 24px;border-radius:999px;font-weight:600">Заявка</a>
+      </div>
+    </div>
+    <div ref="{{ progressRef }}" style="height:2px;width:0%;background:linear-gradient(90deg,#7c3aed,#d9bcff);box-shadow:0 0 12px rgba(185,140,255,.8)"></div>
+  </nav>
+
+  <div style="position:absolute;top:-260px;left:-180px;width:720px;height:720px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.3),transparent 66%);filter:blur(30px);pointer-events:none"></div>
+
+  <header style="position:relative;z-index:3;max-width:1360px;width:100%;margin:0 auto;padding:34px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:16px">
+      <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:25px;letter-spacing:0.18em;text-transform:uppercase">Хавра</span>
+      <span style="font-size:10px;color:#9b91b5;letter-spacing:0.26em;text-transform:uppercase">Таргетолог Telegram Ads</span>
+    </div>
+    <a href="https://t.me/Khavra_05" target="_blank" rel="noopener" style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#f3effa;border:1px solid rgba(185,140,255,.36);border-radius:999px;padding:12px 24px" style-hover="border-color:#b98cff;color:#b98cff;background:rgba(155,92,255,.1)">Написать</a>
+  </header>
+
+  <section style="position:relative;max-width:1360px;margin:0 auto;padding:52px 48px 120px;display:grid;grid-template-columns:1.02fr 0.98fr;gap:64px;align-items:center">
+    <div style="position:relative;z-index:2">
+      <div data-rise="" style="display:inline-flex;align-items:center;gap:11px;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#a99cc4;margin-bottom:34px">
+        <span style="width:5px;height:5px;border-radius:50%;background:#b98cff;box-shadow:0 0 12px #b98cff;animation:khGlow 3.4s ease-in-out infinite"></span>
+        Кейс · Telegram Ads и страницы
+      </div>
+      <h1 data-rise="" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(42px,5.4vw,78px);line-height:1.02;letter-spacing:-0.015em;margin:0 0 30px;text-wrap:balance;animation-delay:.12s">Реклама в Telegram и страницы, которые <span style="font-style:italic;color:#c2a0ff">её продают</span></h1>
+      <p data-rise="" style="font-size:17px;line-height:1.78;color:#a99cc4;font-weight:300;max-width:520px;margin:0 0 40px;text-wrap:pretty;animation-delay:.24s">Настраиваю Telegram Ads и собираю сайты-презентации под этот трафик. Одна рука ведёт кампанию и делает страницу, поэтому обещание в объявлении совпадает с тем, что человек видит после клика.</p>
+      <div data-rise="" style="display:flex;flex-wrap:wrap;gap:14px;animation-delay:.36s">
+        <a href="https://t.me/Khavra_05" target="_blank" rel="noopener" style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#120a20;background:linear-gradient(135deg,#d9bcff,#9b5cff);padding:18px 42px;border-radius:999px;font-weight:600;box-shadow:0 16px 54px rgba(155,92,255,.36);white-space:nowrap" style-hover="background:linear-gradient(135deg,#e9d6ff,#ac74ff);box-shadow:0 20px 66px rgba(155,92,255,.5)">Обсудить проект</a>
+        <a href="https://t.me/Khavra_1992" target="_blank" rel="noopener" style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#f3effa;border:1px solid rgba(243,239,250,.22);padding:18px 42px;border-radius:999px;white-space:nowrap" style-hover="border-color:#b98cff;color:#b98cff">Телеграм-канал</a>
+      </div>
+    </div>
+
+    <div style="position:relative;display:flex;justify-content:center;animation:khFloat 9s ease-in-out infinite">
+      <div style="position:absolute;inset:6% 4%;border-radius:28px;background:radial-gradient(60% 50% at 50% 35%,rgba(155,92,255,.4),transparent 70%);filter:blur(38px)"></div>
+      <div style="position:relative;width:100%;max-width:520px;border-radius:26px;overflow:hidden;border:1px solid rgba(185,140,255,.2);box-shadow:0 40px 120px rgba(30,10,60,.7)">
+        <img src="uploads/pasted-1788117384702-0.png" alt="" style="width:100%;display:block">
+        <div style="position:absolute;left:21%;right:20.5%;top:16.5%;bottom:35.5%;border-radius:14px;background:linear-gradient(150deg,rgba(46,22,82,.94),rgba(24,10,46,.9));backdrop-filter:blur(14px);border:1px solid rgba(214,188,255,.24);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 0 60px rgba(155,92,255,.22);display:flex;flex-direction:column;justify-content:center;padding:6% 8%">
+          <div style="font-family:Manrope,sans-serif;font-weight:700;font-size:clamp(20px,2.5vw,34px);line-height:1.08;letter-spacing:-0.02em;color:#ffffff">Хавра</div>
+          <div style="width:34px;height:2px;background:#b98cff;margin:9% 0 6%"></div>
+          <div style="font-size:clamp(11px,1.15vw,15px);line-height:1.5;font-weight:400;color:#d9cdf5">таргетолог<br><span style="color:#c2a0ff;font-weight:600">телеграм адс</span></div>
+        </div>
+      <div ref="{{ cursorRef }}" style="position:fixed;top:0;left:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;background:radial-gradient(circle,rgba(155,92,255,.13),transparent 68%);pointer-events:none;z-index:1;mix-blend-mode:screen;will-change:transform"></div></div>
+    </div>
+  </section>
+
+  <div style="border-top:1px solid rgba(243,239,250,.08);border-bottom:1px solid rgba(243,239,250,.08);overflow:hidden;padding:22px 0;background:#0e0819">
+    <div style="display:flex;width:max-content;animation:khMarquee 34s linear infinite">
+      <div style="display:flex;align-items:center;gap:56px;width:max-content;flex:none;padding-right:56px">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#a99cc4;white-space:nowrap">Telegram Ads</span>
+        <span style="color:#b98cff">✦</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#a99cc4;white-space:nowrap">Сайты-презентации</span>
+        <span style="color:#b98cff">✦</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#a99cc4;white-space:nowrap">Тексты объявлений</span>
+        <span style="color:#b98cff">✦</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#a99cc4;white-space:nowrap">Ведение кампаний</span>
+        <span style="color:#b98cff">✦</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:56px;width:max-content;flex:none;padding-right:56px">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#a99cc4;white-space:nowrap">Telegram Ads</span>
+        <span style="color:#b98cff">✦</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#a99cc4;white-space:nowrap">Сайты-презентации</span>
+        <span style="color:#b98cff">✦</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#a99cc4;white-space:nowrap">Тексты объявлений</span>
+        <span style="color:#b98cff">✦</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#a99cc4;white-space:nowrap">Ведение кампаний</span>
+        <span style="color:#b98cff">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="position:relative;max-width:1360px;margin:0 auto;padding:140px 48px 50px;overflow:hidden">
+    <canvas ref="{{ flowRef }}" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.85"></canvas>
+    <div data-rise="" style="position:relative;max-width:840px;margin:0 auto;text-align:center">
+      <div style="font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:#b98cff;margin-bottom:30px">Две части одной работы</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(26px,3.4vw,44px);line-height:1.34;margin:0;text-wrap:balance">Реклама приводит человека за секунды. Дальше всё решает страница, на которую он попал.</p>
+    </div>
+  </section>
+
+  <section id="services" style="max-width:1360px;margin:0 auto;padding:50px 48px 40px;scroll-margin-top:110px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(243,239,250,.1)">
+      <div data-rise="" style="background:#0b0616;padding:60px 56px 60px 0">
+        <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:28px">
+          <span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#b98cff;letter-spacing:0.2em">01</span>
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#9b91b5">Трафик</span>
+        </div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;margin:0 0 22px;letter-spacing:-0.01em">Telegram Ads</h2>
+        <p style="font-size:16px;line-height:1.8;color:#a99cc4;font-weight:300;margin:0 0 36px;max-width:440px;text-wrap:pretty">Подключение кабинета, подбор каналов и тематик, тексты объявлений, запуск и ежедневное ведение. Смотрю на цену подписчика и заявки, а не на показы.</p>
+        <div style="display:grid;border-top:1px solid rgba(243,239,250,.1);max-width:460px">
+          <div style="padding:18px 0;border-bottom:1px solid rgba(243,239,250,.1);font-size:14px;color:#d5cde8;font-weight:300;display:flex;gap:16px"><span style="color:#b98cff;font-size:10px">◆</span>Подключение и модерация кабинета</div>
+          <div style="padding:18px 0;border-bottom:1px solid rgba(243,239,250,.1);font-size:14px;color:#d5cde8;font-weight:300;display:flex;gap:16px"><span style="color:#b98cff;font-size:10px">◆</span>Аудитории: каналы, темы, интересы</div>
+          <div style="padding:18px 0;border-bottom:1px solid rgba(243,239,250,.1);font-size:14px;color:#d5cde8;font-weight:300;display:flex;gap:16px"><span style="color:#b98cff;font-size:10px">◆</span>Объявления и тесты креативов</div>
+          <div style="padding:18px 0;border-bottom:1px solid rgba(243,239,250,.1);font-size:14px;color:#d5cde8;font-weight:300;display:flex;gap:16px"><span style="color:#b98cff;font-size:10px">◆</span>Отчёт по расходу и результату</div>
+        </div>
+      </div>
+      <div data-rise="" style="background:#0b0616;padding:60px 0 60px 56px;animation-delay:.14s">
+        <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:28px">
+          <span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#b98cff;letter-spacing:0.2em">02</span>
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#9b91b5">Страница</span>
+        </div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;margin:0 0 22px;letter-spacing:-0.01em">Сайты-презентации</h2>
+        <p style="font-size:16px;line-height:1.8;color:#a99cc4;font-weight:300;margin:0 0 36px;max-width:440px;text-wrap:pretty">Собираю лендинги и презентации под конкретное предложение. Вручную, без тяжёлых конструкторов — от структуры и текста до готовой страницы со ссылкой.</p>
+        <div style="display:grid;border-top:1px solid rgba(243,239,250,.1);max-width:460px">
+          <div style="padding:18px 0;border-bottom:1px solid rgba(243,239,250,.1);font-size:14px;color:#d5cde8;font-weight:300;display:flex;gap:16px"><span style="color:#b98cff;font-size:10px">◆</span>Структура и текст под оффер</div>
+          <div style="padding:18px 0;border-bottom:1px solid rgba(243,239,250,.1);font-size:14px;color:#d5cde8;font-weight:300;display:flex;gap:16px"><span style="color:#b98cff;font-size:10px">◆</span>Дизайн страницы или презентации</div>
+          <div style="padding:18px 0;border-bottom:1px solid rgba(243,239,250,.1);font-size:14px;color:#d5cde8;font-weight:300;display:flex;gap:16px"><span style="color:#b98cff;font-size:10px">◆</span>Адаптив под телефон</div>
+          <div style="padding:18px 0;border-bottom:1px solid rgba(243,239,250,.1);font-size:14px;color:#d5cde8;font-weight:300;display:flex;gap:16px"><span style="color:#b98cff;font-size:10px">◆</span>Кнопки заявки в Telegram и WhatsApp</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" style="max-width:1360px;margin:0 auto;padding:130px 48px;scroll-margin-top:110px">
+    <div data-rise="" style="display:flex;align-items:baseline;justify-content:space-between;gap:40px;margin-bottom:76px;border-bottom:1px solid rgba(243,239,250,.1);padding-bottom:32px">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(34px,4.6vw,62px);letter-spacing:-0.015em;margin:0">Как я работаю</h2>
+      <span style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#9b91b5;white-space:nowrap">Три шага до запуска</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(243,239,250,.1)">
+      <div data-rise="" style="background:#0b0616;padding:0 44px 0 0">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;color:#b98cff;line-height:1;margin-bottom:28px">I</div>
+        <h3 style="font-size:13px;letter-spacing:0.22em;text-transform:uppercase;font-weight:500;margin:0 0 16px">Разбор задачи</h3>
+        <p style="font-size:15px;line-height:1.8;color:#a99cc4;font-weight:300;margin:0;text-wrap:pretty">Списываемся в Telegram. Что продаёте, кому, какой бюджет и что считаем результатом. Говорю сразу, если задача не решается рекламой.</p>
+      </div>
+      <div data-rise="" style="background:#0b0616;padding:0 44px;animation-delay:.14s">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;color:#b98cff;line-height:1;margin-bottom:28px">II</div>
+        <h3 style="font-size:13px;letter-spacing:0.22em;text-transform:uppercase;font-weight:500;margin:0 0 16px">Подготовка</h3>
+        <p style="font-size:15px;line-height:1.8;color:#a99cc4;font-weight:300;margin:0;text-wrap:pretty">Кабинет, аудитории, объявления. Если трафику нужна страница — собираю её параллельно, чтобы запуск не ждал сайта.</p>
+      </div>
+      <div data-rise="" style="background:#0b0616;padding:0 0 0 44px;animation-delay:.28s">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;color:#b98cff;line-height:1;margin-bottom:28px">III</div>
+        <h3 style="font-size:13px;letter-spacing:0.22em;text-transform:uppercase;font-weight:500;margin:0 0 16px">Запуск и ведение</h3>
+        <p style="font-size:15px;line-height:1.8;color:#a99cc4;font-weight:300;margin:0;text-wrap:pretty">Открутка, правки ставок и объявлений, отсев слабых площадок. Держу вас в курсе расхода и того, что происходит с заявками.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="max-width:1360px;margin:0 auto;padding:20px 48px 130px;scroll-margin-top:110px">
+    <div data-rise="" style="display:flex;align-items:baseline;justify-content:space-between;gap:40px;margin-bottom:60px;border-bottom:1px solid rgba(243,239,250,.1);padding-bottom:32px">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(34px,4.6vw,62px);letter-spacing:-0.015em;margin:0">Частые вопросы</h2>
+      <span style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#9b91b5;white-space:nowrap">Коротко и по делу</span>
+    </div>
+    <div style="display:grid;gap:14px;max-width:960px">
+      <details data-rise="" style="border:1px solid rgba(243,239,250,.1);border-radius:16px;background:rgba(243,239,250,.02);padding:24px 28px">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:17px;font-weight:500;color:#f3effa;list-style:none">
+          Какой минимальный бюджет нужен на Telegram Ads?
+          <span data-plus="" style="flex:none;color:#b98cff;font-size:20px;transition:transform .3s">+</span>
+        </summary>
+        <p style="font-size:15px;line-height:1.8;color:#a99cc4;font-weight:300;margin:18px 0 0;max-width:720px;text-wrap:pretty">Зависит от тематики и цели. Прежде чем говорить о сумме, я смотрю на ваш продукт и аудиторию — если бюджета не хватит на нормальный тест, скажу об этом сразу, а не после оплаты.</p>
+      </details>
+      <details data-rise="" style="border:1px solid rgba(243,239,250,.1);border-radius:16px;background:rgba(243,239,250,.02);padding:24px 28px;animation-delay:.08s">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:17px;font-weight:500;color:#f3effa;list-style:none">
+          Сколько ждать первых результатов?
+          <span data-plus="" style="flex:none;color:#b98cff;font-size:20px;transition:transform .3s">+</span>
+        </summary>
+        <p style="font-size:15px;line-height:1.8;color:#a99cc4;font-weight:300;margin:18px 0 0;max-width:720px;text-wrap:pretty">Первые данные появляются в течение нескольких дней открутки: видно, какие каналы и тексты работают. Дальше идёт отсев слабых площадок и правки объявлений.</p>
+      </details>
+      <details data-rise="" style="border:1px solid rgba(243,239,250,.1);border-radius:16px;background:rgba(243,239,250,.02);padding:24px 28px;animation-delay:.16s">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:17px;font-weight:500;color:#f3effa;list-style:none">
+          У меня нет сайта. Это проблема?
+          <span data-plus="" style="flex:none;color:#b98cff;font-size:20px;transition:transform .3s">+</span>
+        </summary>
+        <p style="font-size:15px;line-height:1.8;color:#a99cc4;font-weight:300;margin:18px 0 0;max-width:720px;text-wrap:pretty">Нет. Страницу-презентацию я собираю сам и параллельно с настройкой кампании, поэтому запуск не приходится ждать.</p>
+      </details>
+      <details data-rise="" style="border:1px solid rgba(243,239,250,.1);border-radius:16px;background:rgba(243,239,250,.02);padding:24px 28px;animation-delay:.24s">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:17px;font-weight:500;color:#f3effa;list-style:none">
+          Как я вижу, куда уходит бюджет?
+          <span data-plus="" style="flex:none;color:#b98cff;font-size:20px;transition:transform .3s">+</span>
+        </summary>
+        <p style="font-size:15px;line-height:1.8;color:#a99cc4;font-weight:300;margin:18px 0 0;max-width:720px;text-wrap:pretty">Отчёт по расходу и результату плюс переписка по ходу работы. Я пишу, что происходит с ценой подписчика и заявками, а не присылаю таблицу с показами.</p>
+      </details>
+      <details data-rise="" style="border:1px solid rgba(243,239,250,.1);border-radius:16px;background:rgba(243,239,250,.02);padding:24px 28px;animation-delay:.32s">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:17px;font-weight:500;color:#f3effa;list-style:none">
+          Работаете только с Telegram?
+          <span data-plus="" style="flex:none;color:#b98cff;font-size:20px;transition:transform .3s">+</span>
+        </summary>
+        <p style="font-size:15px;line-height:1.8;color:#a99cc4;font-weight:300;margin:18px 0 0;max-width:720px;text-wrap:pretty">Telegram Ads и страницы под этот трафик — то, что я делаю сам. Если задача выходит за эти рамки, скажу об этом до начала работы.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact" style="position:relative;overflow:hidden;border-top:1px solid rgba(243,239,250,.08);scroll-margin-top:110px">
+    <div style="position:absolute;inset:0;background:radial-gradient(70% 90% at 50% 100%,rgba(155,92,255,.24),transparent 70%)"></div>
+    <canvas ref="{{ emberRef }}" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"></canvas>
+    <div style="position:relative;max-width:1360px;margin:0 auto;padding:160px 48px 170px;text-align:center">
+      <div data-rise="" style="font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:#b98cff;margin-bottom:32px">Связаться</div>
+      <h2 data-rise="" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,6vw,84px);line-height:1.05;letter-spacing:-0.015em;margin:0 auto 26px;max-width:900px;text-wrap:balance;animation-delay:.12s">Расскажите, что продаёте — <span style="font-style:italic;color:#c2a0ff">отвечу, как это запускать</span></h2>
+      <p data-rise="" style="font-size:16px;line-height:1.75;color:#a99cc4;font-weight:300;max-width:480px;margin:0 auto 48px;text-wrap:pretty;animation-delay:.24s">Первое сообщение ни к чему не обязывает. Пара строк о проекте и бюджете — дальше разберёмся.</p>
+      <div data-rise="" style="max-width:720px;margin:0 auto 42px;text-align:left;border:1px solid rgba(243,239,250,.12);border-radius:22px;background:rgba(243,239,250,.03);backdrop-filter:blur(10px);padding:38px 38px 34px;animation-delay:.3s">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+          <input value="{{ fName }}" onChange="{{ onName }}" type="text" placeholder="Имя" style="width:100%;background:rgba(11,6,22,.6);border:1px solid rgba(243,239,250,.14);border-radius:12px;padding:15px 18px;font-family:Manrope,sans-serif;font-size:15px;color:#f3effa" />
+          <input value="{{ fContact }}" onChange="{{ onContact }}" type="text" placeholder="Telegram или телефон" style="width:100%;background:rgba(11,6,22,.6);border:1px solid rgba(243,239,250,.14);border-radius:12px;padding:15px 18px;font-family:Manrope,sans-serif;font-size:15px;color:#f3effa" />
+        </div>
+        <textarea value="{{ fTask }}" onChange="{{ onTask }}" rows="3" placeholder="Что продаёте и какой бюджет" style="width:100%;background:rgba(11,6,22,.6);border:1px solid rgba(243,239,250,.14);border-radius:12px;padding:15px 18px;font-family:Manrope,sans-serif;font-size:15px;color:#f3effa;resize:vertical;margin-bottom:20px"></textarea>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px;justify-content:space-between">
+          <button onClick="{{ onSend }}" data-magnetic="" type="button" style="font-family:Manrope,sans-serif;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#120a20;background:linear-gradient(135deg,#d9bcff,#9b5cff);padding:17px 40px;border:none;border-radius:999px;font-weight:600;box-shadow:0 16px 54px rgba(155,92,255,.36);white-space:nowrap" style-hover="background:linear-gradient(135deg,#e9d6ff,#ac74ff)">Отправить в Telegram</button>
+          <span style="font-size:12px;color:#7e769a;font-weight:300">Откроется чат с готовым сообщением</span>
+        </div>
+      </div>
+      <div data-rise="" style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;animation-delay:.42s">
+        <a href="https://t.me/Khavra_05" target="_blank" rel="noopener" data-magnetic="" style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#f3effa;border:1px solid rgba(243,239,250,.22);padding:19px 46px;border-radius:999px;white-space:nowrap" style-hover="border-color:#b98cff;color:#b98cff">Telegram · личные сообщения</a>
+        <a href="https://wa.me/message/MPG633OU2O7LA1" target="_blank" rel="noopener" data-magnetic="" style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#f3effa;border:1px solid rgba(243,239,250,.22);padding:19px 46px;border-radius:999px;white-space:nowrap" style-hover="border-color:#b98cff;color:#b98cff">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(243,239,250,.08)">
+    <div style="max-width:1360px;margin:0 auto;padding:38px 48px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;font-size:11px;letter-spacing:0.12em;color:#7e769a">
+      <span>Хавра · таргетолог Telegram Ads</span>
+      <div style="display:flex;gap:30px">
+        <a href="https://t.me/Khavra_1992" target="_blank" rel="noopener">Канал</a>
+        <a href="https://t.me/Khavra_05" target="_blank" rel="noopener">Личные сообщения</a>
+        <a href="https://wa.me/message/MPG633OU2O7LA1" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#9b5cff&quot;,&quot;options&quot;:[&quot;#9b5cff&quot;,&quot;#7c3aed&quot;,&quot;#c084fc&quot;,&quot;#6d28d9&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Стиль&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.cursor = React.createRef();
+    this.flow = React.createRef();
+    this.ember = React.createRef();
+    this.ring = React.createRef();
+    this.dot = React.createRef();
+    this.nav = React.createRef();
+    this.progress = React.createRef();
+    this.p = { x: 0, y: 0 };
+  }
+  state = { fName: '', fContact: '', fTask: '' };
+
+  renderVals() {
+    return {
+      cursorRef: this.cursor, flowRef: this.flow, emberRef: this.ember,
+      ringRef: this.ring, dotRef: this.dot, navRef: this.nav, progressRef: this.progress,
+      fName: this.state.fName, fContact: this.state.fContact, fTask: this.state.fTask,
+      onName: (e) => this.setState({ fName: e.target.value }),
+      onContact: (e) => this.setState({ fContact: e.target.value }),
+      onTask: (e) => this.setState({ fTask: e.target.value }),
+      onSend: () => {
+        const { fName, fContact, fTask } = this.state;
+        const msg = 'Здравствуйте! Заявка с сайта.\nИмя: ' + (fName || '—') +
+          '\nКонтакт: ' + (fContact || '—') + '\nЗадача: ' + (fTask || '—');
+        window.open('https://t.me/Khavra_05?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      }
+    };
+  }
+
+  mountCursor() {
+    const ring = this.ring.current, dot = this.dot.current;
+    let rx = 0, ry = 0, dx = 0, dy = 0, raf;
+    const grow = () => {
+      if (!ring) return;
+      ring.style.width = '58px'; ring.style.height = '58px';
+      ring.style.margin = '-29px 0 0 -29px';
+      ring.style.background = 'rgba(185,140,255,.14)';
+    };
+    const shrink = () => {
+      if (!ring) return;
+      ring.style.width = '36px'; ring.style.height = '36px';
+      ring.style.margin = '-18px 0 0 -18px';
+      ring.style.background = 'transparent';
+    };
+    this._over = (e) => {
+      if (ring) ring.style.opacity = '1';
+      if (dot) dot.style.opacity = '1';
+      const t = e.target;
+      if (t && t.closest && t.closest('a,button,summary,input,textarea,[data-magnetic]')) grow(); else shrink();
+    };
+    window.addEventListener('mousemove', this._over);
+    this._leave = () => {
+      if (ring) ring.style.opacity = '0';
+      if (dot) dot.style.opacity = '0';
+    };
+    document.addEventListener('mouseleave', this._leave);
+    const tick = () => {
+      rx += (this.p.x - rx) * 0.16; ry += (this.p.y - ry) * 0.16;
+      dx += (this.p.x - dx) * 0.5; dy += (this.p.y - dy) * 0.5;
+      if (ring) ring.style.transform = 'translate3d(' + rx + 'px,' + ry + 'px,0)';
+      if (dot) dot.style.transform = 'translate3d(' + dx + 'px,' + dy + 'px,0)';
+      raf = requestAnimationFrame(tick);
+    };
+    tick();
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('mousemove', this._over);
+      document.removeEventListener('mouseleave', this._leave);
+    };
+  }
+
+  mountNav() {
+    const nav = this.nav.current, bar = this.progress.current;
+    let raf;
+    const tick = () => {
+      const y = window.scrollY || 0;
+      const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      if (nav) nav.style.transform = y > 220 ? 'translateY(0)' : 'translateY(-100%)';
+      if (bar) bar.style.width = Math.min(100, (y / max) * 100) + '%';
+      raf = requestAnimationFrame(tick);
+    };
+    tick();
+    return () => cancelAnimationFrame(raf);
+  }
+
+  mountMagnets() {
+    const targets = () => document.querySelectorAll('[data-magnetic]');
+    this._mag = (e) => {
+      targets().forEach(el => {
+        const r = el.getBoundingClientRect();
+        const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+        const d = Math.hypot(e.clientX - cx, e.clientY - cy);
+        const reach = Math.max(r.width, r.height) * 1.5;
+        if (d < reach) {
+          const k = (1 - d / reach) * 0.32;
+          el.style.transform = 'translate(' + (e.clientX - cx) * k + 'px,' + (e.clientY - cy) * k + 'px)';
+        } else {
+          el.style.transform = 'translate(0,0)';
+        }
+        el.style.transition = 'transform .28s cubic-bezier(.16,1,.3,1)';
+        el.style.display = el.style.display || 'inline-block';
+      });
+    };
+    window.addEventListener('mousemove', this._mag);
+    return () => {
+      window.removeEventListener('mousemove', this._mag);
+      targets().forEach(el => { el.style.transform = ''; });
+    };
+  }
+
+  canvasLoop(cv, init, frame) {
+    if (!cv) return () => {};
+    const ctx = cv.getContext('2d');
+    let raf, dpr = 1, state = null;
+    const size = () => {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const r = cv.getBoundingClientRect();
+      cv.width = Math.max(1, r.width * dpr);
+      cv.height = Math.max(1, r.height * dpr);
+      state = init(cv, dpr);
+    };
+    size();
+    const onResize = () => size();
+    window.addEventListener('resize', onResize);
+    let visible = true;
+    const io = 'IntersectionObserver' in window
+      ? new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { rootMargin: '120px' })
+      : null;
+    if (io) io.observe(cv);
+    let t = 0;
+    const tick = () => {
+      t++;
+      if (visible) frame(ctx, cv, state, t, dpr);
+      raf = requestAnimationFrame(tick);
+    };
+    tick();
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', onResize);
+      if (io) io.disconnect();
+    };
+  }
+
+  mountFlow() {
+    const accent = this.props.accent ?? '#9b5cff';
+    return this.canvasLoop(this.flow.current, (cv, dpr) => ({
+      lanes: Array.from({ length: 5 }, (_, i) => ({
+        y: cv.height * (0.16 + i * 0.17),
+        amp: cv.height * (0.02 + Math.random() * 0.045),
+        len: cv.width * (0.16 + Math.random() * 0.2),
+        sp: (0.5 + Math.random() * 0.9) * dpr,
+        x: -Math.random() * cv.width,
+        w: (0.9 + Math.random()) * dpr,
+        o: 0.16 + Math.random() * 0.4,
+        k: 0.004 + Math.random() * 0.004
+      })),
+      dpr
+    }), (ctx, cv, s, t) => {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      for (const l of s.lanes) {
+        l.x += l.sp;
+        if (l.x - l.len > cv.width) l.x = -l.len;
+        const grad = ctx.createLinearGradient(l.x - l.len, 0, l.x, 0);
+        grad.addColorStop(0, 'rgba(155,92,255,0)');
+        grad.addColorStop(1, accent);
+        ctx.strokeStyle = grad;
+        ctx.globalAlpha = l.o;
+        ctx.lineWidth = l.w;
+        ctx.beginPath();
+        for (let i = 0; i <= 40; i++) {
+          const x = l.x - l.len + (l.len * i) / 40;
+          const y = l.y + Math.sin(x * l.k + t * 0.008) * l.amp;
+          i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+        }
+        ctx.stroke();
+        const hy = l.y + Math.sin(l.x * l.k + t * 0.008) * l.amp;
+        ctx.globalAlpha = Math.min(1, l.o * 2.4);
+        ctx.fillStyle = accent;
+        ctx.shadowColor = accent;
+        ctx.shadowBlur = 14 * s.dpr;
+        ctx.beginPath();
+        ctx.arc(l.x, hy, 1.8 * s.dpr, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+      ctx.globalAlpha = 1;
+    });
+  }
+
+  mountEmbers() {
+    const accent = this.props.accent ?? '#9b5cff';
+    return this.canvasLoop(this.ember.current, (cv, dpr) => ({
+      dpr,
+      ps: Array.from({ length: Math.round(cv.width / (26 * dpr)) }, () => ({
+        x: Math.random() * cv.width,
+        y: cv.height * (0.6 + Math.random() * 0.8),
+        r: (0.7 + Math.random() * 1.8) * dpr,
+        v: (0.14 + Math.random() * 0.5) * dpr,
+        d: Math.random() * Math.PI * 2,
+        sw: 0.2 + Math.random() * 0.6,
+        o: 0.2 + Math.random() * 0.7
+      }))
+    }), (ctx, cv, s, t) => {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      for (const p of s.ps) {
+        p.y -= p.v;
+        if (p.y < -10) { p.y = cv.height + 10; p.x = Math.random() * cv.width; }
+        const x = p.x + Math.sin(t * 0.006 + p.d) * 18 * s.dpr * p.sw;
+        const fade = Math.max(0, Math.min(1, p.y / cv.height));
+        ctx.globalAlpha = p.o * fade * (0.55 + 0.45 * Math.sin(t * 0.02 + p.d));
+        ctx.fillStyle = Math.random() < 0.5 ? accent : '#e5d5ff';
+        ctx.shadowColor = accent;
+        ctx.shadowBlur = 12 * s.dpr;
+        ctx.beginPath();
+        ctx.arc(x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.shadowBlur = 0;
+      ctx.globalAlpha = 1;
+    });
+  }
+
+  componentDidMount() {
+    const el = this.cursor.current;
+    let cx = 0, cy = 0, raf;
+    this._move = (e) => { this.p.x = e.clientX; this.p.y = e.clientY; };
+    window.addEventListener('mousemove', this._move);
+    const tick = () => {
+      cx += (this.p.x - cx) * 0.09;
+      cy += (this.p.y - cy) * 0.09;
+      if (el) el.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
+      raf = requestAnimationFrame(tick);
+    };
+    tick();
+    this._stop = () => cancelAnimationFrame(raf);
+    this._stopFlow = this.mountFlow();
+    this._stopEmber = this.mountEmbers();
+    this._stopCursor = this.mountCursor();
+    this._stopNav = this.mountNav();
+    this._stopMag = this.mountMagnets();
+
+    const scan = () => {
+      document.querySelectorAll('[data-rise]:not([data-rise-seen])').forEach(e => {
+        e.setAttribute('data-rise-seen', '1');
+        if (this._io) { e.setAttribute('data-armed', '1'); this._io.observe(e); }
+        else e.classList.add('in');
+      });
+    };
+    if ('IntersectionObserver' in window) {
+      this._io = new IntersectionObserver((entries) => {
+        entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); this._io.unobserve(en.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
+    }
+    scan();
+    this._mo = new MutationObserver(scan);
+    this._mo.observe(document.body, { childList: true, subtree: true });
+    this._safety = setTimeout(() => {
+      document.querySelectorAll('[data-rise]').forEach(e => e.classList.add('in'));
+    }, 2500);
+  }
+
+  componentWillUnmount() {
+    if (this._stop) this._stop();
+    if (this._stopFlow) this._stopFlow();
+    if (this._stopEmber) this._stopEmber();
+    [this._stopCursor, this._stopNav, this._stopMag].forEach(f => f && f());
+    if (this._move) window.removeEventListener('mousemove', this._move);
+    if (this._io) this._io.disconnect();
+    if (this._mo) this._mo.disconnect();
+    if (this._safety) clearTimeout(this._safety);
+  }
+}
+
+</script>
+</body>
+</html>
