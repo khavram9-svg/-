@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://khavra05.netlify.app/sitemap.xml
